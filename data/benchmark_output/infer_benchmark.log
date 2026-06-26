@@ -1,0 +1,119 @@
+
+GPU has cuda devices: 1
+----device id: 0 info----
+  GPU : Orin 
+  Capbility: 8.7
+  Global memory: 15655MB
+
+Total 10
+------------------------------------------------------
+Lidar Backbone 🌱 is Static Shape model
+Inputs: 3
+	0.voxels : {50000 x 32 x 10} [Float16]
+	1.voxel_idxs : {50000 x 4} [Int32]
+	2.voxel_num : {1} [Int32]
+Outputs: 3
+	0.cls_preds : {1 x 200 x 200 x 4} [Float32]
+	1.box_preds : {1 x 200 x 200 x 28} [Float32]
+	2.dir_cls_preds : {1 x 200 x 200 x 16} [Float32]
+------------------------------------------------------
+==================PointPillars===================
+[MEM Before inference] GPU: used 7868.87 MB / total 15655.52 MB (50.3%), free 7786.65 MB | CPU RSS: 120.78 MB
+[⏰ [NoSt] CopyLidar]: 	0.17683 ms
+[⏰ Lidar Voxelization]: 	2.34733 ms
+[⏰ Lidar Backbone & Head]: 	76.93133 ms
+[⏰ Lidar Decoder + NMS]: 	3281.26367 ms
+Total: 3360.542 ms
+[MEM After inference] GPU: used 7979.31 MB / total 15655.52 MB (51.0%), free 7676.20 MB | CPU RSS: 247.20 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/024655.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.31 MB / total 15655.52 MB (51.0%), free 7676.20 MB | CPU RSS: 247.20 MB
+[⏰ [NoSt] CopyLidar]: 	0.71507 ms
+[⏰ Lidar Voxelization]: 	0.61168 ms
+[⏰ Lidar Backbone & Head]: 	63.72013 ms
+[⏰ Lidar Decoder + NMS]: 	9.09450 ms
+Total: 73.426 ms
+[MEM After inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.20 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/026501.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.20 MB
+[⏰ [NoSt] CopyLidar]: 	0.42931 ms
+[⏰ Lidar Voxelization]: 	0.29075 ms
+[⏰ Lidar Backbone & Head]: 	37.70169 ms
+[⏰ Lidar Decoder + NMS]: 	8.12413 ms
+Total: 46.117 ms
+[MEM After inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.20 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/026503.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.20 MB
+[⏰ [NoSt] CopyLidar]: 	0.06707 ms
+[⏰ Lidar Voxelization]: 	0.18291 ms
+[⏰ Lidar Backbone & Head]: 	24.71174 ms
+[⏰ Lidar Decoder + NMS]: 	6.38800 ms
+Total: 31.283 ms
+[MEM After inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.46 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/024653.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.46 MB
+[⏰ [NoSt] CopyLidar]: 	0.06102 ms
+[⏰ Lidar Voxelization]: 	0.18032 ms
+[⏰ Lidar Backbone & Head]: 	24.70682 ms
+[⏰ Lidar Decoder + NMS]: 	6.81606 ms
+Total: 31.703 ms
+[MEM After inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.46 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/024654.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.50 MB / total 15655.52 MB (51.0%), free 7676.02 MB | CPU RSS: 247.46 MB
+[⏰ [NoSt] CopyLidar]: 	0.07389 ms
+[⏰ Lidar Voxelization]: 	0.19642 ms
+[⏰ Lidar Backbone & Head]: 	23.79840 ms
+[⏰ Lidar Decoder + NMS]: 	6.64522 ms
+Total: 30.640 ms
+[MEM After inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.46 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/026500.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.46 MB
+[⏰ [NoSt] CopyLidar]: 	0.06746 ms
+[⏰ Lidar Voxelization]: 	0.19267 ms
+[⏰ Lidar Backbone & Head]: 	23.77011 ms
+[⏰ Lidar Decoder + NMS]: 	6.72208 ms
+Total: 30.685 ms
+[MEM After inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.46 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/026502.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.46 MB
+[⏰ [NoSt] CopyLidar]: 	0.06576 ms
+[⏰ Lidar Voxelization]: 	0.19402 ms
+[⏰ Lidar Backbone & Head]: 	23.77574 ms
+[⏰ Lidar Decoder + NMS]: 	6.72314 ms
+Total: 30.693 ms
+[MEM After inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.71 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/026504.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.71 MB
+[⏰ [NoSt] CopyLidar]: 	0.06307 ms
+[⏰ Lidar Voxelization]: 	0.17824 ms
+[⏰ Lidar Backbone & Head]: 	23.73107 ms
+[⏰ Lidar Decoder + NMS]: 	6.51315 ms
+Total: 30.422 ms
+[MEM After inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.71 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/024657.txt
+==================PointPillars===================
+[MEM Before inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.71 MB
+[⏰ [NoSt] CopyLidar]: 	0.06307 ms
+[⏰ Lidar Voxelization]: 	0.17846 ms
+[⏰ Lidar Backbone & Head]: 	23.74659 ms
+[⏰ Lidar Decoder + NMS]: 	6.50627 ms
+Total: 30.431 ms
+[MEM After inference] GPU: used 7979.75 MB / total 15655.52 MB (51.0%), free 7675.77 MB | CPU RSS: 247.71 MB
+=============================================
+Saved prediction in: /home/wbl/jrdb_cuda_pointpillars/data/trt_output/024656.txt

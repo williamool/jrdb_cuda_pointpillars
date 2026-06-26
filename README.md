@@ -78,7 +78,23 @@ bash scripts/3_build_trt_engine.sh   # .plan 必须在 Jetson 上生成
 
 # 直接用预置 .bin 测速（无需 OpenPCDet）
 bash scripts/5_infer_sample.sh 024653
+
+# 全量 10 帧测速（记录 FPS / 显存）
+cd runtime && source tool/environment.sh && cd build
+./pointpillar ../../data/sample_bins/ ../../data/trt_output/ --timer
 ```
+
+## Jetson Orin 推理效率（2026-06-26）
+
+在 **Jetson Orin** 上对 `pointpillar_v2.onnx` → TensorRT FP16 engine 进行了 10 帧样例测试，详细数据见 [`data/benchmark_output/benchmark_summary.md`](data/benchmark_output/benchmark_summary.md)。
+
+| 指标 | 室内 (~14.4k 点) | 室外密集 (~17.8k 点) | 稳态平均 |
+|------|------------------|----------------------|----------|
+| 延迟 | 30.9 ms | 35.4 ms | 33.5 ms |
+| FPS | 32.4 | 28.9 | 30.5 |
+| GPU 显存（稳态） | — | — | 7980 MB / 15656 MB (51%) |
+
+稳态单帧耗时分解：体素化 ~0.2 ms · TensorRT backbone ~25–38 ms · Decoder+NMS ~6–9 ms。首帧含 TRT/CUDA 预热，延迟约 3.4 s，不计入稳态统计。
 
 ## 推理流水线
 

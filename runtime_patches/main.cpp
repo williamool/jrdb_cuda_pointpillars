@@ -119,7 +119,7 @@ std::shared_ptr<pointpillar::lidar::Core> create_core() {
 
     pointpillar::lidar::CoreParameter param;
     param.voxelization = vp;
-    param.lidar_model = "../model/pointpillar_v2.plan";
+    param.lidar_model = "../../model/pointpillar_v2.plan";
     param.lidar_post = pp;
     return pointpillar::lidar::create_core(param);
 }
@@ -148,7 +148,11 @@ int main(int argc, char** argv) {
 
     const char *in_dir = argv[1];
     const char *out_dir = argv[2];
-    bool timer = (argc == 4 && startswith(argv[3], "--timer", nullptr));
+    const char *value = nullptr;
+    bool timer = false;
+    if (argc == 4 && startswith(argv[3], "--timer", &value)) {
+        timer = true;
+    }
 
     GetDeviceInfo();
 

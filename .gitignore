@@ -18,4 +18,4 @@ model/pointpillar.onnx
 
 # Inference outputs (keep data/sample_bins/ in repo)
 data/trt_output/
-data/benchmark_output/
+model/trt_v2_build.log
