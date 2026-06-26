@@ -15,3 +15,7 @@ model/pointpillar.onnx
 
 # Training checkpoints
 *.pth
+
+# Inference outputs (keep data/sample_bins/ in repo)
+data/trt_output/
+data/benchmark_output/

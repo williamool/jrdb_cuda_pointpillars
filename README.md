@@ -16,6 +16,7 @@ jrdb_cuda_pointpillars/
 │   ├── export_onnx.py
 │   ├── modify_onnx.py
 │   └── prepare_bin.py             # JRDB .npy → .bin
+├── data/sample_bins/              # 预置测试帧 (.bin, Jetson 可直接用)
 ├── runtime_patches/               # JRDB v2 C++ 补丁
 └── scripts/
     ├── 1_export_onnx.sh
@@ -55,6 +56,27 @@ bash scripts/4_build_runtime.sh
 bash scripts/3_build_trt_engine.sh
 
 # Step 5: 单帧推理测试
+bash scripts/5_infer_sample.sh 024653
+```
+
+## Jetson 板端测试
+
+仓库已包含 **10 帧** JRDB 测试点云（`data/sample_bins/`，约 2.5 MB），无需拷贝完整数据集或 OpenPCDet：
+
+| 帧 ID | 场景 | 点数 |
+|-------|------|------|
+| 024653–024657 | 室内 | ~14.4k |
+| 026500–026504 | 室外密集 | ~17.8k |
+
+```bash
+git clone git@github.com:williamool/jrdb_cuda_pointpillars.git
+cd jrdb_cuda_pointpillars
+
+bash scripts/2_setup_runtime.sh
+bash scripts/4_build_runtime.sh      # Jetson: source runtime/tool/environment.sh
+bash scripts/3_build_trt_engine.sh   # .plan 必须在 Jetson 上生成
+
+# 直接用预置 .bin 测速（无需 OpenPCDet）
 bash scripts/5_infer_sample.sh 024653
 ```
 
